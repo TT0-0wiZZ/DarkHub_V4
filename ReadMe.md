@@ -2,6 +2,6 @@
 
 1. Open up any executor for roblox, and execute this loadstring:
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub_V4/main/init", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/init", true))()
 ```
 2. Profit.
