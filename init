@@ -1,46 +1,46 @@
 pcall(function()
-    task.spawn(function()
-        if getconnections then
-            local L_1_ = game:GetService("ScriptContext")
-            for L_2_forvar1, L_3_forvar2 in next, getconnections(L_1_.Error) do
-                L_3_forvar2:Disable()
-            end
-        end
-        local L_1_ = game:GetService("HttpService")
-        local L_2_ = game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/SupportedGames", true)
-        local L_3_ = L_1_:JSONDecode(L_2_)
-        if L_3_[tostring(game.GameId)] then
-            loadstring(game:HttpGet(string.format("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/%s", L_3_[tostring(game.GameId)]), true))()
-        else
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/Universal", true))()
-        end
-        if hookfunction then
-            local L_4_
-            L_4_ = hookfunction(game.HttpGet, function(L_6_arg1, L_7_arg2)
-                if string.find(L_7_arg2, "evoincorp") then
-                    return L_4_(L_6_arg1, "https://raw.githubusercontent.com/ttwizz/Documents/master/icons.json")
-                end
-                if string.find(L_7_arg2, "shlexware") then
-                    return L_4_(L_6_arg1, "https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua")
-                end
-                if string.find(L_7_arg2, "NougatBitz") then
-                    return L_4_(L_6_arg1, string.gsub(L_7_arg2, "NougatBitz", "ttwizz"))
-                end
-                return L_4_(L_6_arg1, L_7_arg2)
-            end)
-            local L_5_
-            L_5_ = hookfunction(game.HttpGetAsync, function(L_8_arg1, L_9_arg2)
-                if string.find(L_9_arg2, "evoincorp") then
-                    return L_5_(L_8_arg1, "https://raw.githubusercontent.com/ttwizz/Documents/master/icons.json")
-                end
-                if string.find(L_9_arg2, "shlexware") then
-                    return L_5_(L_8_arg1, "https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua")
-                end
-                if string.find(L_9_arg2, "NougatBitz") then
-                    return L_5_(L_8_arg1, string.gsub(L_9_arg2, "NougatBitz", "ttwizz"))
-                end
-                return L_5_(L_8_arg1, L_9_arg2)
-            end)
-        end
-    end)
+	task.spawn(function()
+		if getconnections then
+			local L_4_ = game:GetService("ScriptContext")
+			for L_5_forvar1, L_6_forvar2 in next, getconnections(L_4_.Error) do
+				L_6_forvar2:Disable()
+			end
+		end
+		if hookfunction then
+			local L_7_
+			L_7_ = hookfunction(game.HttpGet, function(L_9_arg1, L_10_arg2)
+				if string.find(L_10_arg2, "evoincorp") then
+					return L_7_(L_9_arg1, "https://raw.githubusercontent.com/ttwizz/Documents/master/icons.json")
+				end
+				if string.find(L_10_arg2, "shlexware") then
+					return L_7_(L_9_arg1, "https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua")
+				end
+				if string.find(L_10_arg2, "NougatBitz") then
+					return L_7_(L_9_arg1, string.gsub(L_10_arg2, "NougatBitz", "ttwizz"))
+				end
+				return L_7_(L_9_arg1, L_10_arg2)
+			end)
+			local L_8_
+			L_8_ = hookfunction(game.HttpGetAsync, function(L_11_arg1, L_12_arg2)
+				if string.find(L_12_arg2, "evoincorp") then
+					return L_8_(L_11_arg1, "https://raw.githubusercontent.com/ttwizz/Documents/master/icons.json")
+				end
+				if string.find(L_12_arg2, "shlexware") then
+					return L_8_(L_11_arg1, "https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua")
+				end
+				if string.find(L_12_arg2, "NougatBitz") then
+					return L_8_(L_11_arg1, string.gsub(L_12_arg2, "NougatBitz", "ttwizz"))
+				end
+				return L_8_(L_11_arg1, L_12_arg2)
+			end)
+		end
+		local L_1_ = game:GetService("HttpService")
+		local L_2_ = game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/SupportedGames", true)
+		local L_3_ = L_1_:JSONDecode(L_2_)
+		if L_3_[tostring(game.GameId)] then
+			loadstring(game:HttpGet(string.format("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/%s", L_3_[tostring(game.GameId)]), true))()
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/Universal", true))()
+		end
+	end)
 end)
