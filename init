@@ -18,6 +18,9 @@ pcall(function()
 				if string.find(L_10_arg2, "NougatBitz") then
 					return L_7_(L_9_arg1, string.gsub(L_10_arg2, "NougatBitz", "ttwizz"))
 				end
+				if string.find(L_10_arg2, "RandomAdamYT") then
+					return L_7_(L_9_arg1, string.gsub(L_10_arg2, "RandomAdamYT", "ttwizz"))
+				end
 				return L_7_(L_9_arg1, L_10_arg2)
 			end)
 			local L_8_
@@ -30,6 +33,9 @@ pcall(function()
 				end
 				if string.find(L_12_arg2, "NougatBitz") then
 					return L_8_(L_11_arg1, string.gsub(L_12_arg2, "NougatBitz", "ttwizz"))
+				end
+				if string.find(L_12_arg2, "RandomAdamYT") then
+					return L_8_(L_11_arg1, string.gsub(L_12_arg2, "RandomAdamYT", "ttwizz"))
 				end
 				return L_8_(L_11_arg1, L_12_arg2)
 			end)
